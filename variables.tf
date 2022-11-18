@@ -1,5 +1,5 @@
 variable "project_id" {
-	type = "string"
+	type = string
 	description = "The code for the project that the database is associated with."
 }
 variable "database_name" {
