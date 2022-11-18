@@ -28,9 +28,9 @@ variable "database_server_port" {
 variable "ssl_mode" {
 	type = string
 	description = "Whether Vault should attempt to create a secure connection. Requires TLS on the database side."
-	default = "enabled"
+	default = "prefer"
 	validation {
-    condition     = var.ssl_mode == "enabled" || var.ssl_mode == "disabled"
-    error_message = "The ssl_mode value must be one of enabled OR disabled."
+    condition     = var.ssl_mode == "allow" || var.ssl_mode == "disable" || var.ssl_mode == "prefer" || var.ssl_mode == "require" || var.ssl_mode == "verify-ca" || var.ssl_mode == "verify-full"
+    error_message = "The ssl_mode value must be one of enabled OR disable."
   }
 }
