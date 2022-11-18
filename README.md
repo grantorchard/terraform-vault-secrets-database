@@ -1,3 +1,4 @@
-# Your Terraform Workspace
+# Vault Database Secrets
 
-Update this readme with information relevant to the project you are working on.
+This is a Terraform module that allows you to demonstrate dynamic database credentials.
+It currently sets up a read-only role on the target database, future work will allow for multiple roles and BYO creation statements.
